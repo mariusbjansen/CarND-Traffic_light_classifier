@@ -1,0 +1,24 @@
+- Downloaded Files from ROS bag
+- Source https://drive.google.com/file/d/0B2_h37bMVw3iYkdJTlRSUlJIamM/view
+- Taken from https://discussions.udacity.com/t/traffic-light-detection-test-video-rosbag-has-no-image-color/526250
+
+Extract jpg from ROSBAG
+Terminal 1
+source devel/setup.bash (if not alread in .bashrc)
+roscore
+
+Terminal 2
+source devel/setup.bash (if not alread in .bashrc)
+rosrun image_view image_saver image:=image_raw
+(found topic by running "rostopic list" and see that image_raw is correct)
+
+Terminal 3
+source devel/setup.bash (if not alread in .bashrc)
+rosbag play -l traffic_light_bag_files/just_traffic_light.bag
+
+Jpeg images will be present in ros folder
+
+----------
+
+Other sources for training data
+https://hci.iwr.uni-heidelberg.de/node/6132/download/75410a8e479d5b2bf7b548b4b2979a0c
